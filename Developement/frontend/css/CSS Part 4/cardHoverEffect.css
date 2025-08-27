@@ -1,0 +1,35 @@
+.card{
+    width:300px;
+    height:350px;
+    border: 2px solid purple;
+    box-shadow: 3px 3px 5px rgb(182, 156, 182);
+    border-radius: 10px;
+    background-color: #212121;
+    margin: 0 auto;
+    justify-content: center;
+    transition: box-shadow 0.3s ease-in-out 0s ;
+}
+.img{
+    width:80%;
+    height:65%;
+    background-image: url(profilepic.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    border: 2px solid white;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+p{
+    color:white;
+    margin-left: 5px;
+}
+h2{
+    color: white;
+    text-decoration:  underline purple;
+    text-align: center;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 10px rgb(140, 3, 140);
+    cursor: pointer;
+}

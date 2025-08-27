@@ -1,0 +1,16 @@
+div{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 0 auto; /* Center the div horizontally */
+    transition: margin-top 1s ease-in-out 0s; /* Transition for margin-top */
+    /* This will apply to the entire div, including its content */
+}
+
+div:hover{
+    margin-top: 500px; /* Move the div down on hover */
+    /* The transition will animate this change */
+    background-color: black;
+    /* Change background color on hover */
+}

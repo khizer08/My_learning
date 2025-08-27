@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checked_boxes Radio_buttons Dropdown Range & Textarea</title>
+</head>
+<body>
+    <form action="/action">
+        <!--Use of check boxes-->
+        Choose your favorite fruits:
+        <div>
+        <label for="choose">apple</label>
+        <input type="checkbox" id="choose" name="fruit" value="apple">
+        <label for="choose2">banana</label>
+        <input type="checkbox" id="choose2" name="fruit" value="banana">
+        <label for="choose3">orange</label>
+        <input type="checkbox" id="choose3" name="fruit" value="orange">
+        <label for="choose4">grape</label>
+        <input type="checkbox" id="choose4" name="fruit" value="grape">
+        </div>
+        <hr>
+        
+        <!--Use of radio buttons-->
+        Select you course:
+        <div>
+            <label for="course1">HTML</label>
+            <input type="radio" id="course1" name="course" value="html">
+            <label for="course2">CSS</label>
+            <input type="radio" id="course2" name="course" value="css">
+            <label for="course3">JavaScript</label>
+            <input type="radio" id="course3" name="course" value="javascript">
+            <label for="course4">Python</label>
+            <input type="radio" id="course4" name="course" value="python">
+        </div>
+        <hr>
+
+        <!--Use of dropdown-->
+        Choose you profession:
+        <div>
+            <select name="profession" id="profession">
+                <option value="select">Select Profession</option>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+                <option value="manager">Manager</option>
+                <option value="analyst">Analyst</option>
+            </select>
+        </div>
+        <hr>
+
+        <!--Use of textarea-->
+        <div>
+            <label for="Volume">Select Volume</label>
+            <input type="range" id="Volume" name="vol" min="0" max="100" step="10" value="50">
+        </div>
+        <hr>
+        
+        <!--Use of textarea-->
+        <div>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="100" cols="120" placeholder="Type your comments here..."></textarea>
+        </div>
+        <hr>
+
+        <button type="submit">Submit</button>
+        </form>
+</body>
+</html>

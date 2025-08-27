@@ -1,0 +1,31 @@
+#mainTopic{
+    color:blue;
+}
+*{
+    text-align: center;
+}
+h1,h3,h5{
+    font-family: "Georgia";
+}
+div button{
+    background-color: purple;
+    color:azure;
+}
+.content{
+    background-color: cornflowerblue;
+    color: white;
+}
+button:hover{
+    background-color: yellow;
+    color: blue;
+
+}
+p:nth-last-of-type(2n+1){
+    color: yellow;
+}
+h1::first-letter{
+    color:red;
+}
+input[type]:checked+label{
+    color: darkgreen;
+}

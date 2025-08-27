@@ -1,0 +1,47 @@
+.box{
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    margin: 0 auto;
+    text-align: center;
+/* 
+    animation-name: myanimate;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+
+    animation: myanimate 2.5s ease-in-out 0s infinite alternate;
+}
+h1{
+    text-align: center;
+    text-decoration: double underline green;
+}
+@keyframes myanimate{
+    /* from{
+        border-radius: 0px;
+        background-color: black;
+    }
+    to{
+        border-radius: 50%;
+        background-color: blueviolet;
+    } */
+
+    0%{
+        border-radius: 0px;
+        background-color: black;
+    }
+    40%{
+        border-radius: 20%;
+        background-color: red;
+    }
+    80%{
+        border-radius: 40%;
+        background-color: purple;
+    }
+    100%{
+        border-radius: 50%;
+        background-color: yellow;
+    }
+}

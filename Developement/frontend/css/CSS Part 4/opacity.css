@@ -1,0 +1,8 @@
+div{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 0, 0);
+    border: 2px solid rgb(0, 0, 255); 
+    opacity: 0.5; /* 50% opacity */
+    /* This will apply to the entire div, including its content */
+}

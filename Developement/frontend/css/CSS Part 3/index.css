@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+    color:darkgreen;
+    border:2px dashed black;
+    border-left:5px dashed gray;
+}
+
+.paragraph{
+    background-color:darkgreen;
+    border:3px dashed black;
+    color:white;
+    border-radius: 15px;
+}
+
+button{
+    background-color:darkgreen;
+    color:white;
+    border:3px solid black;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#button-container{
+    text-align: center;
+}
+
+button:hover{
+    background-color:darkorange;
+    color:black;
+}
+
+button:active{
+    background-color:darkred;
+    color:white;
+}

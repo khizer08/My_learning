@@ -1,0 +1,15 @@
+div{
+    width: 150px;
+    height: 150px;
+    background-color: darkgreen;
+    border: 2px solid black;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#static{
+    position: static;
+    top:200px;
+    background-color: lightblue;
+
+}

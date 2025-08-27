@@ -1,0 +1,26 @@
+.container {
+  height: 400px; 
+  width: 80%;  
+  border: 2px solid black;
+  font-weight: bold;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;  
+  align-items: baseline;
+}
+
+h1 {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.container div {
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  color: white;
+}
+
+

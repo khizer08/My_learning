@@ -1,0 +1,15 @@
+h1{
+    background-color: red;
+}
+@media (min-width:400px){
+    h1{
+        background-color: azure;
+    }
+
+}
+@media (max-width:200px){
+    h1{
+        background-color: orange;
+    }
+
+}

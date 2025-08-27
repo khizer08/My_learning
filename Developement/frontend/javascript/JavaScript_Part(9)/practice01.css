@@ -1,0 +1,20 @@
+.p-text{
+    color:red;
+}
+
+.h3-text{
+    color:blue;
+}
+
+.div-class{
+    width: 300px;
+    height: 300px;
+    border:2px solid black;
+    background-color: pink;
+}
+.h1-class{
+    color:white;
+}
+.para2-class{
+    color:white;
+}
