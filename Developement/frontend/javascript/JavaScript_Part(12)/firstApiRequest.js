@@ -7,6 +7,7 @@ fetch(url) // Fetch gives/returns promise
     return resp.json(); 
 })
 .then((data)=>{
+    console.log(data);
     console.log("Facts about cats",data.fact);
 })
 .catch((err)=>{
