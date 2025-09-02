@@ -1,0 +1,12 @@
+{
+  "name": "requirevsimport",
+  "version": "1.0.0",
+  "main": "export.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "khizer",
+  "license": "ISC",
+  "description": "",
+  "type":"module"
+}
