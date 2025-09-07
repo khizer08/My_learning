@@ -1,4 +1,4 @@
-const figlet = require("figlet"); // fot packages need not to add slash
+const figlet = require("figlet"); // for packages need not to add slash
 
 figlet("huehue", function (err, data) {
   if (err) {
