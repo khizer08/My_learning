@@ -1,9 +1,9 @@
-
 #main{
     border:2px solid black;
     width: 70px;
     padding-left: 15px;
 }
+
 #red{
     height: 50px;
     width: 50px;
@@ -13,6 +13,7 @@
     margin-bottom: 10px;
     margin-top: 10px;
 }
+
 #yellow{
     height: 50px;
     width: 50px;
@@ -21,6 +22,7 @@
     background-color: yellow;
     margin-bottom: 10px;
 }
+
 #green{
     height: 50px;
     width: 50px;
