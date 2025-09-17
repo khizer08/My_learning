@@ -1,9 +1,19 @@
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 5rem;
+}
+
 .face{
     height:400px;
     width:400px;
     border-radius: 50%;
     background-color: orange;
+    margin-top: 5rem;
+    transition: box-shadow 0.1s ease-in 0.2s;
 }
+
 .eye-left{
     height:50px;
     width:50px;
@@ -13,6 +23,7 @@
     top: 100px;
     left: 100px;
 }
+
 .eye-right{
     height:50px;
     width:50px;
@@ -22,6 +33,7 @@
     top: 50px;
     left: 250px;
 }
+
 .mouth{
     height:50px;
     width:200px;
@@ -30,4 +42,8 @@
     position:relative;
     top: 150px;
     left: 100px;
+}
+
+.face:hover{
+    box-shadow: 5px 5px 10px gray;
 }
