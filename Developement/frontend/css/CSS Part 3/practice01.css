@@ -4,6 +4,7 @@ body {
     padding-top: 5rem;
     margin: 0;                /* remove default body margin */
 }
+
 #main{
     border:2px solid black;
     width: 70px;
