@@ -1,5 +1,7 @@
 let size=prompt("enter the size(xl,l,m,s): ");
+
 size=size.toLowerCase();
+
 if(size=="xl"){
     console.log("The price is 250");
 }
