@@ -1,5 +1,5 @@
 let movie="animal";
-let guess=prompt("Enter Your Guess: ");
+let guess=prompt("Enter Your Guess (guess my favourite mivie :) ): ");
 while((guess != movie && guess != "quit")){
     guess=prompt(" Wrong Guess Try Again Or Type 'quit' To Quit: ");
 }
