@@ -12,5 +12,5 @@ app.listen(port,()=>{  // listen is a method of app object which accepts two par
 app.use((req,res)=>{
     console.log("request received");
 
-    res.send("response send"); // send is use to send response
+    res.send("response send using nodemon"); // send is use to send response
 });
