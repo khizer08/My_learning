@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instagram</title>
+</head>
+<body>
+    <h1>this page belongs to @<%= username %></h1>
+    <button>follow</button>
+    <button>message</button>
+    <h2>accounts that follows you:</h2>
+
+    <!--Loops in EJS-->
+    <ul>
+        <% for (name of followers) {%>
+            <li><%= name %></li>
+        <%}%>
+    </ul>
+    
+</body>
+</html>
