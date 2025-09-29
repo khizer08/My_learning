@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>activity insta</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-
+<%- include("includes/header.ejs") %>
 <body>
     <h1>this is activity insta page @<%= data.name %></h1>
     <button>follow</button>
@@ -20,7 +12,7 @@
         <img src="<%=post.image%>" alt="some image">
         <p>likes: <%= post.likes %> &nbsp; &nbsp; &nbsp; &nbsp; comments: <%= post.comments %></p> 
     <%}%>
-
+    <%- include("includes/footer.ejs") %>
     <script src="/app.js"></script>
 </body>
 </html>
