@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <!-- Form using GET -->
+    <h3>
+        <form method="get" action="http://localhost:8080/register">
+            <label for="username">username:</label>
+            <input type="text" placeholder="enter username" id="username" name="user"><br>
+            <label for="password">password:</label>
+            <input type="password" placeholder="enter password" id="password" name="password">
+            <button type="submit">submit</button>
+        </form><br><hr>
+    </h3>
+
+<!-- Form using POST -->
+ <h3>
+     <form method="post" action="http://localhost:8080/register">
+         <label for="username1">username:</label>
+         <input type="text" placeholder="enter username" id="username1" name="user"><br>
+         <label for="password1">password:</label>
+         <input type="password" placeholder="enter password" id="password1" name="password">
+         <button type="submit">submit</button>
+     </form>
+ </h3>
+
+
+</body>
+</html>
