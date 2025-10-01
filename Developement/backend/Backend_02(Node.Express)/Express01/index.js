@@ -9,8 +9,13 @@ app.listen(port,()=>{  // listen is a method of app object which accepts two par
     console.log(`the server is listening ${port}`);
 });
 
-app.use((req,res)=>{
+app.use("/",(req,res)=>{
     console.log("request received");
-
+    
     res.send("response send using nodemon"); // send is use to send response
 });
+
+// app.get("/",(req,res)=>{
+    // console.log("request received");
+//     res.send("response send using nodemon");
+// })

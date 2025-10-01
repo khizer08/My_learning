@@ -4,7 +4,8 @@ const path=require("path");
 const app=express();
 const port=8080;
 
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}));// both these lines are used because "post" request gives data 
+// in the body property and express cannot recongnise it , so to encode we use this. 
 app.use(express.json());
 
 app.get("/register",(req,res)=>{

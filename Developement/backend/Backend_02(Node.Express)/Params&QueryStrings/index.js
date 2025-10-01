@@ -29,6 +29,5 @@ app.get("/search",(req,res)=>{ // query string , in url after /search?q= "what e
 });
 
 app.get(/.*/, (req, res) => {
-    let code ="<h1>Page not exist!</h1>";
-    res.status(404).send(code);
+    res.status(404).send("page not found");// works only for "GET" request.
 });
