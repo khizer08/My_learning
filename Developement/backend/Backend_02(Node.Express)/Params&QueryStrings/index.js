@@ -20,7 +20,7 @@ app.get("/:username/:id",(req,res)=>{ // username and id is variables which hold
 
 app.get("/search",(req,res)=>{ // query string , in url after /search?q= "what ever is written in this string" will be fetched.
     // do remember "/search" can be anything but we named this route name as "search".
-    // "query parameter" could be anything but we named it as
+    // "query parameter" could be anything but we named it as "q".
     let {q}=req.query;
     if(!q){
         res.send(`<h1>page not searched</h1>`);

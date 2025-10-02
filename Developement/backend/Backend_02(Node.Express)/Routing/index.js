@@ -13,7 +13,7 @@ app.listen(port,()=>{
 
 //     res.send("response send");
 // });
-// while using 'use' method we dont get error if the path doesnt exists
+// while using 'use' method we dont get error if the path doesnt exists.
 
 app.get("/",(req,res)=>{
     res.send("response send to root path");
@@ -26,7 +26,7 @@ app.get("/orange",(req,res)=>{
 });
 
 app.use((req, res) => {
-  res.status(404).send("Page not found");// valid for all methods if path is invalid
+  res.status(404).send("Page not found");// valid for all methods if path is invalid.
 });
 
 
