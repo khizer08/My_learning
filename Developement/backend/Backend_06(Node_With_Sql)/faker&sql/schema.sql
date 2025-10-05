@@ -1,1 +1,8 @@
-show tables;
+DROP TABLE IF EXISTS first_table;
+
+CREATE TABLE first_table (
+  id VARCHAR(50) PRIMARY KEY,
+  username VARCHAR(30) UNIQUE,
+  email VARCHAR(50) UNIQUE NOT NULL,
+  password VARCHAR(30) NOT NULL
+);
