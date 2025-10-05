@@ -1,7 +1,7 @@
 const express=require("express");
 const path=require("path");
-const { v4: uuidv4 }=require('uuid');
-const methodOverride=require("method-override");
+const { v4: uuidv4 }=require('uuid');// to generate random "id".
+const methodOverride=require("method-override");// to override the post as "delete" or "patch" or "put".
 
 const port =8080;
 const app=express();
