@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Validation</title>
+</head>
+<body>
+
+  <h2>Email Validation</h2>
+
+  <input type="text" id="emailInput" placeholder="Enter your email">
+  <button id="validateBtn">Validate</button>
+
+  <div id="message" class="message"></div>
+
+  <script>
+    const emailInput = document.getElementById('emailInput');
+    const validateBtn = document.getElementById('validateBtn');
+    const messageDiv = document.getElementById('message');
+
+    // Regular expression for validating email
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+
+    validateBtn.addEventListener('click', () => {
+      const email = emailInput.value.trim();
+
+      if (email === "") {
+        messageDiv.textContent = "Please enter an email.";
+        messageDiv.className = "message invalid";
+      } else if (emailRegex.test(email)) {
+        messageDiv.textContent = "Valid email address!";
+        messageDiv.className = "message valid";
+      } else {
+        messageDiv.textContent = "Invalid email address!";
+        messageDiv.className = "message invalid";
+      }
+    });
+  </script>
+
+</body>
+</html>
