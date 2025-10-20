@@ -27,6 +27,7 @@ let posts=[
     }
 ]
 
+
 app.get("/posts",(req,res)=>{
     res.render("index.ejs",{posts}); // home page.
 });
