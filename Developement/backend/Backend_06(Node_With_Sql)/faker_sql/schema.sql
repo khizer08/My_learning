@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS practice;
+USE practice;
+
 DROP TABLE IF EXISTS first_table;
 
 CREATE TABLE first_table (

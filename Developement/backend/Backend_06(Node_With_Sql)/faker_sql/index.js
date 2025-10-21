@@ -23,7 +23,6 @@ const connection= mysql.createConnection({
     password:"root"
 });
 
-
 try{
   connection.query(q,[data],(err,result)=>{
     if(err) throw err;
