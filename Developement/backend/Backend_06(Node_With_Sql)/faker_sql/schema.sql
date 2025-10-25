@@ -1,7 +1,7 @@
-CREATE DATABASE IF NOT EXISTS practice;
-USE practice;
+create database if not exists practice;
+use practice;
 
-DROP TABLE IF EXISTS first_table;
+drop table if exists first_table;
 
 CREATE TABLE first_table (
   id VARCHAR(50) PRIMARY KEY,
