@@ -175,11 +175,12 @@ app.delete("/user/:id",(req,res)=>{
   }
 });
 
-// new user route
+// newUser route
 app.get("/newUser",(req,res)=>{
   res.render("newUser.ejs");
 });
 
+// newUser (db) route
 app.post("/newUser",(req,res)=>{
   let id=getId();
   let {username,email,password}=req.body;
