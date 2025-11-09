@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Whataspp</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h3>All Chats!</h3>
+    <form method="GET" action="/chats/new">
+        <button>new chat</button>
+    </form>
+    <% for(let chat of chats){%>
+        <div class="chat">
+            <p>from:<i><%= chat.from %></i></p>
+            <div class="msg">
+                <p><%= chat.msg %></p>
+            </div>
+            <p>Received by:<i><%= chat.to %></i></p>
+            <hr>
+            <p><%=chat.created_at.toString().split(" ")[4]%></p><!--converting it to the "string" and spilting it where "space" comes and only fectching "4th index"-->
+            <p><%=chat.created_at.toString().split(" ").slice(0,4).join("-")%></p> <!--converting it to the "string" and spilting it where "space" comes and only fectching "0 to 3rd index"and also "joining" it with "-" -->
+        </div>
+        <br>
+        <br>
+    <%}%>
+</body>
+</html>
+
+
