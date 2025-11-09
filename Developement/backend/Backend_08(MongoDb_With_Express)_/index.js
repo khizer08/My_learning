@@ -31,7 +31,7 @@ app.get("/",(req,res)=>{
 // all chats route
 app.get("/chats",async (req,res)=>{
     let chats=await Chat.find();
-    res.render("index.ejs",{chats});
+    res.render("allChats.ejs",{chats});
 });
 
 
