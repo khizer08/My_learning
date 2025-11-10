@@ -1,4 +1,4 @@
-const express = require ("express");
+const express = require("express");
 const path=require("path");
 const methodOverride=require("method-override");
 const mongoose = require('mongoose');
@@ -9,7 +9,7 @@ const app=express();
 
 app.set("views",path.join(__dirname,"views"));
 app.set("view engine","ejs");
-app.use(express.static(path.join(__dirname,"public")))
+app.use(express.static(path.join(__dirname,"public")));
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
 
@@ -75,7 +75,7 @@ app.get("/chats/:id/edit",async(req,res)=>{
 //update route
 app.put("/chats/:id",async (req,res)=>{
     let {id}=req.params;
-    let {msg:newMsg}=req.body; // do remember how data is coming from body
+    let {msg:newMsg}=req.body; // do remember how data is coming from body.
     let updatedChat=await Chat.findByIdAndUpdate(
         id,
         {msg:newMsg},
