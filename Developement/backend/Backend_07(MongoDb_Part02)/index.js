@@ -5,7 +5,9 @@ main() //function which returns "promise" we can make use of "then to get result
 .then((res)=>{
     console.log("connection successful");
 })
-.catch(err => console.log(err));
+.catch((err)=>{
+  console.log(err);
+});
 
 async function main() { //as "main() is a async function " it returns "promise" .
   await mongoose.connect('mongodb://127.0.0.1:27017/test');
@@ -26,7 +28,7 @@ const User=mongoose.model("User",userSchema); // "model" creation.
 //   {name:"peter",email:"peter@gmail.com",age:40},
 //   {name:"bruce",email:"bruce@gmail.com",age:30},
 // ]).then((res)=>{
-  //   console.log(res);
+//     console.log(res);
 // });
 
 
@@ -106,10 +108,10 @@ const User=mongoose.model("User",userSchema); // "model" creation.
 // });
 
 
-User.findOneAndDelete({name:"eve"})
-.then((res)=>{
-  console.log(res);
-})
-.catch((err)=>{
-  console.log(err);
-});
+// User.findOneAndDelete({name:"eve"})
+// .then((res)=>{
+//   console.log(res);
+// })
+// .catch((err)=>{
+//   console.log(err);
+// });
