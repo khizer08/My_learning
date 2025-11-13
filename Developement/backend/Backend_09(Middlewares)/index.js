@@ -1,5 +1,5 @@
 const express=require("express");
-
+const ExpressError=require("./ExpressError");
 const port=8080;
 const app=express();
 
@@ -21,7 +21,7 @@ const checkToken=("/api",(req,res,next)=>{
         next();
     }
     else{
-        throw new Error("ACCESS DENIED!"); // customize error
+        throw new ExpressError(401,"ACCESS DENIED!"); // customize error
     }
 });
 app.get("/api",checkToken,(req,res)=>{
@@ -34,10 +34,29 @@ app.get("/",(req,res)=>{
     res.send("hii, iam root");
 });
 
+// error page
 app.get("/random",(req,res)=>{
-    res.send("hii this is a random page");
+    abc=abc;
 });
 
+
+//activity
+app.get("/admin",(req,res)=>{
+    throw new ExpressError(403,"access to admin is forbidden");
+});
+
+
+// if none of the request meet this will execute.
+app.use((req,res)=>{
+    res.send("page not found");
+});
+
+
+// custom error handling
+app.use((err,req,res,next)=>{
+    let{status=500,message="some error"}=err;
+    res.status(status).send(message);    
+});
 
 
 app.listen(port,()=>{
