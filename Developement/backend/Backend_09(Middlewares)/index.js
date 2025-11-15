@@ -1,17 +1,18 @@
 const express=require("express");
 const ExpressError=require("./ExpressError");
+
 const port=8080;
 const app=express();
 
 
-//Middleware response
-//logger
-// app.use((req,res,next)=>{
-//     // res.send("hii iam middleware");
-//     res.time= Date.now();
-//     console.log(req.method,req.hostname,req.path,req.time);
-//     next();
-// });
+// Middleware response
+// logger
+app.use((req,res,next)=>{
+    res.send("hii iam middleware");
+    res.time= Date.now();
+    console.log(req.method,req.hostname,req.path,req.time);
+    next();
+});
 
 
 // example of middleware in authentication
@@ -29,10 +30,10 @@ app.get("/api",checkToken,(req,res)=>{
 });
 
 
-
 app.get("/",(req,res)=>{
     res.send("hii, iam root");
 });
+
 
 // error page
 app.get("/random",(req,res)=>{
@@ -46,7 +47,7 @@ app.get("/admin",(req,res)=>{
 });
 
 
-// if none of the request meet this will execute.
+// if none of the requested route meet this will execute.
 app.use((req,res)=>{
     res.send("page not found");
 });
