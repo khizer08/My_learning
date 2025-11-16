@@ -1,5 +1,4 @@
-const Joi=require("joi");
-
+const Joi=require("joi"); // for error handling of individual fields.
 
 module.exports.listingSchema=Joi.object({
     listing:Joi.object({

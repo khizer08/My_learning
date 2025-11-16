@@ -1,5 +1,5 @@
 const mongoose=require("mongoose");
-const Schema=mongoose.Schema;
+const Schema=mongoose.Schema;// just so that we need to write "mongoose.Schema" often.
 
 const listingSchema=new Schema({
     title:{

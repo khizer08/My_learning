@@ -6,7 +6,7 @@ const Listing=require("./models/listing.js");
 const ejsMate=require("ejs-mate");
 const wrapAsync=require("./utils/wrapAsync.js");
 const ExpressError=require("./utils/ExpressError.js");
-const {listingSchema}=require("./schema.js");
+const {listingSchema}=require("./schema.js"); // schema validation by "joi" is being imported.
 
 const port=8080;
 const app=express();
