@@ -14,7 +14,7 @@ async function main() {
 }
 
 
-//Order Schema
+//Order Schema (child)
 const orderSchema = new Schema({
     item:
     {
@@ -26,7 +26,7 @@ const orderSchema = new Schema({
 });
 
 
-// Customer Schema
+// Customer Schema (parent)
 const customerSchema=new Schema({
     name:{
         type:String,
@@ -38,6 +38,22 @@ const customerSchema=new Schema({
         },
     ]
 });
+
+
+// pre post middlewares of mongoosh to handle deletion of interrelated collections
+
+customerSchema.pre("findOneAndDelete",async()=>{
+    console.log("pre middleware");
+});
+
+customerSchema.post("findOneAndDelete",async(customers)=>{ // here "customers" is a parameter which can be of any name, and it is representing "customers" collection.
+    if(customers.orders.length){
+    let res=await Order.deleteMany({_id: {$in: customers.orders}});
+    console.log(res);
+    }
+});
+
+
 
 //Order model
 const Order=mongoose.model("Order",orderSchema);
@@ -76,4 +92,31 @@ const addCustomer=async()=>{
     let result = await Customer.find({}).populate("orders");
     console.log(result[0]);
 };
-addCustomer();
+// addCustomer();
+
+
+// deletion of customer along with his/her orders
+const addCust=async()=>{
+    let newCust=new Customer({
+        name:"karan arjun"
+    });
+    let newOrder=new Order({
+        item:"pizza",
+        price:250,
+    });
+
+    newCust.orders.push(newOrder);
+
+    await newOrder.save();
+    await newCust.save();
+
+    console.log("added new customer");
+};
+// addCust();
+
+
+const delCust=async()=>{
+    let data=await Customer.findByIdAndDelete("691acd79eecd73c33465fce7");
+    console.log(data);
+}
+delCust();

@@ -20,7 +20,7 @@ const userSchema = new Schema({
     },
     addresses:[
         {
-            _id:false, // "mongodb" thinks this is different document an creates "id" for each address , to avoid it this line. 
+            _id:false, // "mongodb" thinks this is different document and creates "id" for each address , to avoid we make use of this line. 
             location:{
                 type:String,
             },
