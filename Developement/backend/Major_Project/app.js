@@ -4,6 +4,7 @@ const path=require("path");
 const methodOverride=require("method-override");
 const ejsMate=require("ejs-mate");
 const ExpressError=require("./utils/ExpressError.js");
+const session=require("express-session");
 
 
 const listings=require("./routes/listing.js"); // requiring the whole "listings" related routes.
@@ -19,6 +20,19 @@ app.set("view engine","ejs");
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname,"public")));
+
+const sessionOption={// mentioning different session "options".
+    secret: "mysupersecretcode",
+    resave:false,
+    saveUninitialized:true,
+    cookie:{
+        expires: Date.now()+ 7 *24*60*60*1000,
+        maxAge: 7*24*60*60*1000,
+        httpOnly:true,// for security purpose
+    },
+}
+
+app.use(session(sessionOption));// once we use this middleware ,for all routes a session default cookie will be sent to client .
 
 app.engine("ejs",ejsMate);
 
