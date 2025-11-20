@@ -15,7 +15,9 @@
     <!--including "navbar.ejs" -->
     <%- include("../includes/navbar.ejs") %>
 
-    <div class="container"><%- body %></div> <!--we are using "class=container" because of "bootstrap" and the "body" is to insert the child ejs template-->
+    <div class="container">
+        <%- include("../includes/flash.ejs")%>  <%- body %>
+    </div> <!--we are using "class=container" because of "bootstrap" and the "body" is to insert the child ejs template-->
 
     <!--including "footer.ejs" -->
     <%- include("../includes/footer.ejs")%>

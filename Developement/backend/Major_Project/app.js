@@ -5,6 +5,7 @@ const methodOverride=require("method-override");
 const ejsMate=require("ejs-mate");
 const ExpressError=require("./utils/ExpressError.js");
 const session=require("express-session");
+const flash=require("connect-flash");
 
 
 const listings=require("./routes/listing.js"); // requiring the whole "listings" related routes.
@@ -30,9 +31,17 @@ const sessionOption={// mentioning different session "options".
         maxAge: 7*24*60*60*1000,
         httpOnly:true,// for security purpose
     },
-}
+};
+
+
+//Home Page
+app.get("/",(req,res)=>{
+    res.send("home page");
+});
+
 
 app.use(session(sessionOption));// once we use this middleware ,for all routes a session default cookie will be sent to client .
+app.use(flash());// flash has to be used before the routes which requires the functionality of "flash".
 
 app.engine("ejs",ejsMate);
 
@@ -47,12 +56,12 @@ async function main() {
     await mongoose.connect('mongodb://127.0.0.1:27017/wanderlust');
 }
 
-
-//Home Page
-app.get("/",(req,res)=>{
-    res.send("home page");
+app.use((req,res,next)=>{
+    res.locals.success=req.flash("success");
+    res.locals.error=req.flash("error");
+    console.log(res.locals.success);
+    next();
 });
-
 
 app.use("/listings",listings); // using the "listings" route, any route which is found in the "listings" module will default start with "/listings".
 app.use("/listings/:id/reviews",reviews); // // using the "reviews" route, any route which is found in the "reviews" module will default start with "/reviews".
