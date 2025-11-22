@@ -6,6 +6,9 @@ const ejsMate=require("ejs-mate");
 const ExpressError=require("./utils/ExpressError.js");
 const session=require("express-session");
 const flash=require("connect-flash");
+const passport=require("passport");
+const LocalStrategy=required("passport-local");
+const User=require("./models/user.js");
 
 
 const listings=require("./routes/listing.js"); // requiring the whole "listings" related routes.
@@ -43,6 +46,13 @@ app.get("/",(req,res)=>{
 app.use(session(sessionOption));// once we use this middleware ,for all routes a session default cookie will be sent to client .
 app.use(flash());// flash has to be used before the routes which requires the functionality of "flash".
 
+app.use(passport.initialize()); // middleware which initializes "passport".
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()))
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 app.engine("ejs",ejsMate);
 
 
@@ -62,6 +72,7 @@ app.use((req,res,next)=>{
     console.log(res.locals.success);
     next();
 });
+
 
 app.use("/listings",listings); // using the "listings" route, any route which is found in the "listings" module will default start with "/listings".
 app.use("/listings/:id/reviews",reviews); // // using the "reviews" route, any route which is found in the "reviews" module will default start with "/reviews".
