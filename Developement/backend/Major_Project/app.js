@@ -7,12 +7,13 @@ const ExpressError=require("./utils/ExpressError.js");
 const session=require("express-session");
 const flash=require("connect-flash");
 const passport=require("passport");
-const LocalStrategy=required("passport-local");
+const LocalStrategy=require("passport-local");
 const User=require("./models/user.js");
 
 
-const listings=require("./routes/listing.js"); // requiring the whole "listings" related routes.
-const reviews=require("./routes/review.js"); // requiring the whole "reviews" related routes.
+const listingRouter=require("./routes/listing.js"); // requiring the whole "listings" related routes.
+const reviewRouter=require("./routes/review.js"); // requiring the whole "reviews" related routes.
+const userRouter=require("./routes/user.js"); // requiring the whole "users" related routes.
 
 
 const port=8080;
@@ -74,8 +75,19 @@ app.use((req,res,next)=>{
 });
 
 
-app.use("/listings",listings); // using the "listings" route, any route which is found in the "listings" module will default start with "/listings".
-app.use("/listings/:id/reviews",reviews); // // using the "reviews" route, any route which is found in the "reviews" module will default start with "/reviews".
+app.use("/listings",listingRouter); // using the "listingRouter" route, any route which is found in the "listings" module will default start with "/listings".
+app.use("/listings/:id/reviews",reviewRouter); // // using the "reviewRouter" route, any route which is found in the "reviews" module will default start with "/reviews".
+app.use("/",userRouter); // // using the "users" route, any route which is found in the "users" module will default start with "/".
+
+
+// app.get("/demouser",async(req,res)=>{
+//     let fakeUser=new User({
+//         email:"student@gmail.com",
+//         username:"delta-student"
+//     });
+//     let registeredUser=await User.register(fakeUser,"helloworld");
+//     res.send(registeredUser);
+// });
 
 
 //for any route that doesnt exist.

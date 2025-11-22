@@ -9,7 +9,7 @@ const userSchema=new Schema({
     }
 });
 
-User.plugin(passportLocalMongoose);// "plugin" automatically creates "username,salting,hashing" for us.
+userSchema.plugin(passportLocalMongoose);// "plugin" automatically creates "username,salting,hashing" for us.
 
 module.exports = mongoose.model('User', userSchema);
 
