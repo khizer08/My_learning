@@ -80,15 +80,6 @@ app.use("/listings/:id/reviews",reviewRouter); // // using the "reviewRouter" ro
 app.use("/",userRouter); // // using the "users" route, any route which is found in the "users" module will default start with "/".
 
 
-// app.get("/demouser",async(req,res)=>{
-//     let fakeUser=new User({
-//         email:"student@gmail.com",
-//         username:"delta-student"
-//     });
-//     let registeredUser=await User.register(fakeUser,"helloworld");
-//     res.send(registeredUser);
-// });
-
 
 //for any route that doesnt exist.
 app.use((req,res,next)=>{
