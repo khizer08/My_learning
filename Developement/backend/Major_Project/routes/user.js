@@ -10,14 +10,19 @@ router.get("/signup",(req,res)=>{
 });
 
 // SignUp POST route 
-router.post("/signup",wrapAsync(async(req,res)=>{
+router.post("/signup",wrapAsync(async(req,res,next)=>{
     try{
         let{username,email,password}=req.body;
         const newUser =new User({email,username});
         const registeredUser=await User.register(newUser,password);
         console.log(registeredUser);
-        req.flash("success","Welcome to Wanderlust");
-        res.redirect("/listings");
+        req.login(registeredUser,(err)=>{
+            if(err){
+                return next(err);
+            }
+            req.flash("success","Welcome to Wanderlust");
+            res.redirect("/listings");
+        });
     }catch(err){
         req.flash("error",err.message);
         res.redirect("/signup");
@@ -36,5 +41,15 @@ router.post("/login",passport.authenticate("local",{failureRedirect:"/login",fai
     res.redirect("/listings");
 }));
 
+
+router.get("/logout",(req,res,next)=>{
+    req.logout((err)=>{ //"req.logout" method is used to logged out the user in the session.
+        if(err){
+            return next(err);
+        }
+        req.flash("success","logged out!");
+        res.redirect("/listings");
+    });
+});
 
 module.exports=router;
