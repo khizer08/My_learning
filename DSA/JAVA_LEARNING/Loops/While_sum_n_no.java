@@ -10,6 +10,7 @@ public class While_sum_n_no{
             sum+=count;
             count++;
         }
-        System.out.println("sum of 1 to "+n+" is: "+sum);
+        System.out.println("Sum of 1 to "+n+" is: "+sum);
+        sc.close();
     }
 }
