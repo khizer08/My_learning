@@ -7,7 +7,7 @@ public class hallow_rectangle {
         number=sc.nextInt();
         for(i=1;i<=number;i++){
             for(j=1;j<=number+1;j++){
-                if(i==1 || i==number || j==1 || j==number+1){
+                if(i==1 || i==number || j==1 || j==number+1){// covering all the cases first.
                     System.out.print("*");
                 }else{
                 System.out.print(" ");
