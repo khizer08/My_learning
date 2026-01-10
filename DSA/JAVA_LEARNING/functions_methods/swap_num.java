@@ -9,6 +9,6 @@ public class swap_num {
         System.out.println("b value: "+b);
     }
     public static void main(String[] args) {
-        swap(5,10);
+        swap(5,10);// actual parameters 
     }
 }
