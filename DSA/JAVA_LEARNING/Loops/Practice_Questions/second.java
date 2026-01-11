@@ -2,7 +2,7 @@ import java.util.*;
 public class second{
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
-        int even=0,odd=0,number,i,check=0;
+        int even=0,odd=0,number,check=0;
         do{
             System.out.print("Enter the number: ");
             number=sc.nextInt();
