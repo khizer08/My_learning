@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class z_pattern {
+public class z_pattern {// try again
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
