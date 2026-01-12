@@ -18,7 +18,7 @@ public class binomial_coefficient{
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.println(binomial_coefficient_cal(5,2));
+        System.out.println(binomial_coefficient_cal(5,2));// actual parameter
         sc.close();
     }
 }
