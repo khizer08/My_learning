@@ -1,18 +1,19 @@
 import java.util.*;
 public class binomial_coefficient{
 
+    public static int factCal(int number){
+        int fact=1;
+        for(int i=1;i<=number;i++){
+            fact*=i;
+        }
+        return fact;
+    }
+
     public static int binomial_coefficient_cal(int n,int r){
         int n_fact=1,r_fact=1,n_r_fact=1;
-        for(int i=1;i<=n;i++){
-            n_fact*=i;
-        }
-        for(int i=1;i<=r;i++){
-            r_fact*=i;
-        }
-        int n_r=n-r;
-        for(int i=1;i<=n_r;i++){
-            n_r_fact*=i;
-        }
+        n_fact=factCal(n);
+        r_fact=factCal(r);
+        n_r_fact=factCal(n-r);
         int result=n_fact/(r_fact*n_r_fact);
         return result;
     }
