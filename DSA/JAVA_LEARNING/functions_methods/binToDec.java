@@ -10,6 +10,6 @@ public class binToDec{
         return decimal;
     }
     public static void main(String[] args) {
-        System.out.println(binToDecFun(1000));
+        System.out.println(binToDecFun(10111));
     }
 }
