@@ -1,5 +1,8 @@
-public class task{
-   public static boolean isPrime(int number){
+import java.util.*;
+
+public class countNumOfPrime {
+
+   public static boolean isPrime(int number){// to find prime
         if(number==2){
             return true;// edge case handling.
         }
@@ -10,9 +13,8 @@ public class task{
         return true;
     }
 
-    public static void numOfPrime(){
-        int number=10;
-        for(int i=2;i<number;i++){
+    public static void numOfPrime(int n){// to find all prime numbers
+        for(int i=2;i<=n;i++){
             boolean result=isPrime(i);
             if(result==true){
                 System.out.print(i+" ");
@@ -21,7 +23,12 @@ public class task{
     }
 
     public static void main(String[] args) {
-        numOfPrime();
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the range to find the prime numbers: ");
+        int n=sc.nextInt();
+        numOfPrime(n);
+
+        sc.close();
     }
-}
    
+}
