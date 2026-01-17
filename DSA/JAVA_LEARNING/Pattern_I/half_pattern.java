@@ -15,3 +15,10 @@ public class half_pattern{
         sc.close();
     }
 }
+
+// output:-
+// 1
+// 12
+// 123
+// 1234
+// 12345
