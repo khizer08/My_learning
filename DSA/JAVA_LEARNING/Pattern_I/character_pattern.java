@@ -16,3 +16,10 @@ class character_pattern{
         sc.close();
     }
 }
+
+// output:-
+// A
+// BC
+// DEF
+// GHIJ
+// KLMNO
