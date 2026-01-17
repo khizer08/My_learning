@@ -14,3 +14,10 @@ public class reverse_star{
         sc.close();
     }
 }
+
+// output:-
+// *****
+// ****
+// ***
+// **
+// *
