@@ -3,8 +3,8 @@ import java.util.*;
 public class z_pattern {// try again
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("enter the number: ");
         int n = sc.nextInt();
-
         for(int i=1;i<=n;i++) {
             System.out.print("*");// first line logic
         }
@@ -23,3 +23,10 @@ public class z_pattern {// try again
         sc.close();
     }
 }
+
+// output:-
+// *****
+//    *
+//   *
+//  *
+// *****
