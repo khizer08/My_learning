@@ -14,3 +14,10 @@ public class star{
         sc.close();
     }
 }
+
+// output:-
+// *
+// **
+// ***
+// ****
+// *****
