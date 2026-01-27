@@ -1,6 +1,7 @@
+import './First.css';
 function First(){
   return (
-    <h1>Hii iam first component</h1>
+    <h1 className='First-comp-heading'>Hii iam first component</h1>
   );
 }
 
