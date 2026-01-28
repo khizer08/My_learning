@@ -1,12 +1,11 @@
 import './App.css'
-import First from './First.jsx';
+import Intro_list from './Intro_list.jsx';
 
 function App() {
 
   return (
     <div>
-      <h1>Hello World!</h1>
-      <First> </First>
+      <Intro_list/>
     </div>
   );
 }
