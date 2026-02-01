@@ -9,7 +9,7 @@ function Liker() {
   };
   return (
     <p>
-      Like:{" "}
+      Like:
       <a onClick={isLike}>
         {like ? (
           <i className="fa-regular fa-heart" style={styles}></i>
