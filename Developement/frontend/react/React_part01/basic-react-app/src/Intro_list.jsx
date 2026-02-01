@@ -5,6 +5,7 @@ function Intro_list(){
     return(
         <>
         <Intro greet="hii"name="khizer" features={features} />
+        <Intro greet="hii"name="syed" features={features} />
         </>
     );
 }
