@@ -1,24 +1,21 @@
 import { useState } from "react";
+import { genTicket, sum } from "./helper";
+import Ticket from "./Ticket";
 
-function Lottery() {
-  const [ticket, setTicket] = useState([]);
-  const [result, setResult] = useState("");
+function Lottery({n=3, winningSum=15}) {
+  const [ticket, setTicket] = useState(genTicket(n));
+  let isWinning = sum(ticket) === winningSum;
 
-  let generateNum = () => {
-    let number1 = Math.floor(Math.random() * 10);
-    let number2 = Math.floor(Math.random() * 10);
-    let number3 = Math.floor(Math.random() * 10);
-    let allNUm = Number(number1 + "" + number2 + "" + number3);
-    setTicket(allNUm);
-
-    let sum = Number(number1 + number2 + number3);
-    setResult(sum === 15 ? "Congratulations,you won!" : "");
+  let buyTicket = () => {
+    setTicket(genTicket(n));
   };
+
   return (
     <div>
-      <h1>Lottery {result}</h1>
-      <p>Lottery Ticket={ticket}</p>
-      <button onClick={generateNum}>Get New Ticket</button>
+      <h1>Lottery</h1>
+      <span><b>{isWinning && "Congratulations! You Won"}</b></span>
+      <Ticket ticket={ticket}/>
+      <button onClick={buyTicket}>Get New Ticket</button>
     </div>
   );
 }
