@@ -2,9 +2,9 @@ import { useState } from "react";
 import { genTicket, sum } from "./helper";
 import Ticket from "./Ticket";
 
-function Lottery({n=3, winningSum=15}) {
+function Lottery({n=3, winCondition}) {
   const [ticket, setTicket] = useState(genTicket(n));
-  let isWinning = sum(ticket) === winningSum;
+  let isWinning = winCondition(ticket);
 
   let buyTicket = () => {
     setTicket(genTicket(n));
