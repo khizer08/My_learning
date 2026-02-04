@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 function TodoList() {
   const [todos, setTodos] = useState([
     { task: "sample", id: uuidv4(), isDone: false },
-  ]); // as we are saving two informations as we are using array of objects
+  ]); // as we are saving three informations , and it will be different for different tasks , so we are using array of objects.
   const [newTodo, setNewTodo] = useState("");
 
   let addNewTask = () => {
