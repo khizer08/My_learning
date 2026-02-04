@@ -12,7 +12,7 @@ function Comment() {
   ]);
 
   let addNewComment = (comment) => {
-    setComments((currComments) => [...currComments, comment]);
+    setComments((comments) => [...comments, comment]);
   };
   return (
     <>

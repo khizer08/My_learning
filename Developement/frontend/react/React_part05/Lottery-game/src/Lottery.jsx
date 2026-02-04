@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { genTicket, sum } from "./helper";
+import { genTicket } from "./helper";
 import Ticket from "./Ticket";
 
 function Lottery({n=3, winCondition}) {
