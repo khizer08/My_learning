@@ -1,6 +1,8 @@
 import java.util.Arrays;
 
 public class array_reverse{
+
+    // here we are using extra array , which means extra space , and space complexity will be O(n).
     public static int[] array_reverse_func(int number[]){ // as we are returning an array we need to use "int[]"" as the "return type".
         int j=-1;
         int number2[]=new int[number.length];

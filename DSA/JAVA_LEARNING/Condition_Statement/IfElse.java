@@ -11,5 +11,6 @@ public class IfElse{
             System.out.println("You are not adult");
 
         }
+        sc.close();
     }
 }

@@ -6,5 +6,6 @@ public class Ternary {
         int marks=sc.nextInt();
         String result=marks>=33 ? "Pass" : "Fail";
         System.out.println(result);
+        sc.close();
     }
 }

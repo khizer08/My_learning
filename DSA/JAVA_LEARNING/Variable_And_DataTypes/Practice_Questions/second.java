@@ -5,5 +5,7 @@ public class second {
         System.out.print("Enter the side measurement: ");
         double side=sc.nextDouble();
         System.out.println("The are of square is "+side*side);
+
+        sc.close();
     }
 }

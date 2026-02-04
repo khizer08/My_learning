@@ -10,5 +10,7 @@ public class third {
         float eraser=sc.nextFloat();
         double total=(pencil+pen+eraser)+(pencil+pen+eraser)*0.18;
         System.out.println("The total cost is "+total+"(with 18% gst)");
+
+        sc.close();
     }
 }

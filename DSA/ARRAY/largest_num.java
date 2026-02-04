@@ -1,17 +1,17 @@
 public class largest_num{
-    public static int func(){
-        int a[]={12,34,56,78,66,99};
+    public static int func(int number[]){
         int largest=Integer.MIN_VALUE; // (-)infinity.
-        for(int i=0;i<a.length;i++){
-            if(a[i]>largest){
-                largest=a[i];
+        for(int i=0;i<number.length;i++){
+            if(number[i]>largest){
+                largest=number[i];
             }
             
         }
         return largest;
     }
     public static void main(String[] args) {
-        int result=func();
+        int number[]={32,67,45,44,12,88,22};
+        int result=func(number);
         System.out.print(result);
     }
 }

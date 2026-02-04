@@ -11,5 +11,7 @@ public class first{
         double sum=number1+number2+number3;
         double avg=sum/3;
         System.out.println("The average of "+sum+" is "+avg);
+
+        sc.close();
     }
 }

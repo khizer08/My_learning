@@ -6,5 +6,7 @@ public class InputProg {
         int number2=sc.nextInt();
         int sum=number1+number2;
         System.out.println(sum);
+
+        sc.close();
     }
 }

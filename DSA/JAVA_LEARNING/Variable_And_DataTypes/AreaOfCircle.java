@@ -6,5 +6,7 @@ public class AreaOfCircle {
         float radius=sc.nextFloat();
         double area=(Math.PI*radius*radius);
         System.out.print(area);
+
+        sc.close();
     }
 }
