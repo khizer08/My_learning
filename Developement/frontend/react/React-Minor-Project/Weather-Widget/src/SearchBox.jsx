@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import "./SearchBox.css";
 import { useState } from "react";
 
-function SearchBox() {
+function SearchBox({updateInfo}) {
   let [city, setCity] = useState("");
   const API_URL = "https://api.openweathermap.org/data/2.5/weather";
   const API_KEY = "f6dc1c47ccf63c23ed79b13145be2491";
@@ -16,6 +16,7 @@ function SearchBox() {
 
     let result = {
       // we are only taking require data from the API response
+      city: city,
       temp: jsonResponse.main.temp,
       tempMin: jsonResponse.main.temp_min,
       tempMax: jsonResponse.main.temp_max,
@@ -24,20 +25,21 @@ function SearchBox() {
       weather: jsonResponse.weather[0].description,
     };
     console.log(result);
+    return result
   };
 
   let handleChange = (event) => {
     setCity(event.target.value);
   };
 
-  let handleSubmit = (event) => {
+  let handleSubmit = async (event) => {
     event.preventDefault();
     setCity("");
-    getWeatherInfo();
+    let newInfo=await getWeatherInfo();
+    updateInfo(newInfo);
   };
   return (
     <div className="SearchBox">
-      <h3>Search for the Weather</h3>
       <form onSubmit={handleSubmit}>
         <TextField
           id="city"
