@@ -8,8 +8,8 @@ function AddForm() {
   const submitHandler = (event) => {
     event.preventDefault();
     console.log(task);
-    dispatch(addTodo(task));
-    setTask("");
+    dispatch(addTodo(task));// we need to give the specific "reducer func ,and what data(task) to be sent to "payload" "
+    setTask(()=>(""));
   };
 
   return (
