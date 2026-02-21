@@ -5,7 +5,7 @@ public class task {
         Scanner sc = new Scanner(System.in);
         int a = 10, b = 50, c = 30;
         int max = (a > b) ? (a > c ? a : c) : (b > c ? b : c);
-        System.out.println("largest: "+max);
+        System.out.println("largest: " + max);
         sc.close();
     }
 }
