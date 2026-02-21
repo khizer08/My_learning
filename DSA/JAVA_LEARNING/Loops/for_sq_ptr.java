@@ -4,8 +4,8 @@ public class for_sq_ptr {
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter the value of n: ");
         int n=sc.nextInt();
-        for(int j=1;j<=n;j++){
-            for(int i=1;i<=n;i++){
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n;j++){
                 System.out.print("*");
             }
             System.out.println();
