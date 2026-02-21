@@ -11,7 +11,7 @@ public class Prime_No {
             for(int i=2;i<=Math.sqrt(number);i++){// to optimize the loop , as if we compare till sqrt(number) we already visited all the factors of that number, no need further.
                 if(number%i==0){
                     isPrime=false;
-                    break;
+                    break;// once we find its "Not a prime" we exit.
                 }
             }
         }
