@@ -1,21 +1,22 @@
-public class minmaxsumsubarray{
-    public static int[] min_max_sum_sub_array_func(int number[]){
-        int min=Integer.MAX_VALUE;// understand.
-        int max=Integer.MIN_VALUE;
+public class minmaxsumsubarray {
+    public static int[] min_max_sum_sub_array_func(int number[]) {
+        int min = Integer.MAX_VALUE;// understand.
+        int max = Integer.MIN_VALUE;
 
-        for(int i=0;i<number.length;i++){
-            for(int j=i;j<number.length;j++){
+        for (int i = 0; i < number.length; i++) {
+            for (int j = i; j < number.length; j++) {
                 System.out.print("[");
-                int sum=0;// we need to initialize this varible here itself , as we need to calculate sum for the entire subarray and reset sum to zero.
-                for(int k=i;k<=j;k++){
-                    System.out.print(" "+number[k]);
-                    sum+=number[k];
+                int sum = 0;// we need to initialize this varible here itself , as we need to calculate sum
+                            // for the entire subarray and reset sum to zero.
+                for (int k = i; k <= j; k++) {
+                    System.out.print(" " + number[k]);
+                    sum += number[k];
 
-                    for(int l=0;l<=k;l++){// min and max value in array logic.
-                        if(sum>=max){
-                            max=sum;
-                        }else if(sum<=min){
-                            min=sum;
+                    for (int l = 0; l <= k; l++) {// min and max value in array logic.
+                        if (sum >= max) {
+                            max = sum;
+                        } else if (sum <= min) {
+                            min = sum;
                         }
                     }
 
@@ -27,12 +28,13 @@ public class minmaxsumsubarray{
             }
             System.out.println();
         }
-        System.out.println("The min sum value in the array is: "+min);
-        System.out.print("The max sum value in array is: "+max);
+        System.out.println("The min sum value in the array is: " + min);
+        System.out.print("The max sum value in array is: " + max);
         return number;
     }
+
     public static void main(String[] args) {
-        int number[]={1,-2,6,-1,3};
+        int number[] = { 1, -2, 6, -1, 3 };
         min_max_sum_sub_array_func(number);
     }
 }
