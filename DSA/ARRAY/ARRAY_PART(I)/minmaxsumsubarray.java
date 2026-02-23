@@ -34,7 +34,7 @@ public class minmaxsumsubarray {
     }
 
     public static void main(String[] args) {
-        int number[] = { 1, -2, 6, -1, 3 };
+        int number[] = { 1, -2, 6, -1, 3 ,5};
         min_max_sum_sub_array_func(number);
     }
 }
