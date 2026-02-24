@@ -16,7 +16,7 @@ public class prefixminmaxsubarray {
             for (int j = i; j < number.length; j++) {
                 int end = j;
 
-                currSum = start == 0 ? prefix[end] : prefix[end] - prefix[start - 1];
+                currSum = start == 0 ? prefix[end] : prefix[end] - prefix[start - 1]; // core logic.
 
                 if (maxSum < currSum) {
                     maxSum = currSum;
