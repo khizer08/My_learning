@@ -32,3 +32,6 @@ public class prefixminmaxsubarray {
         func(number);
     }
 }
+
+// output:-
+// max sum= 15
