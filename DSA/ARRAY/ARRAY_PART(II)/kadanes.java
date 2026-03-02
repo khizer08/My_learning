@@ -20,5 +20,6 @@ public class kadanes {
 // output:-
 // maximum Sum= 15
 
-// #NOTE:- For special case where all the elements of the array is negative run
+// #NOTE:-
+// For special case where all the elements of the array is negative run
 // a loop and find the min negative number and store it as "maxSum".
