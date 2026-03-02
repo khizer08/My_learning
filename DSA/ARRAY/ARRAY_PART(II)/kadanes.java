@@ -6,7 +6,7 @@ public class kadanes {
             if (currSum < 0) {
                 currSum = 0;
             }
-            maxSum = Math.max(currSum, maxSum);
+            maxSum = Math.max(currSum, maxSum); // core logic
         }
         System.out.println("maximum Sum= " + maxSum);
     }
