@@ -2,15 +2,16 @@ public class stock {
 
     public static int func(int price[]) {
 
-        int n = price.length, buyPrice = price[0], sellPrice = 0, profit = 0,index=-1;
+        int n = price.length, buyPrice = Integer.MAX_VALUE, maxProfit = 0;
         for (int i = 0; i < n; i++) {
-            buyPrice = Math.min(buyPrice, price[i]);
+            if (buyPrice < price[i]) {
+                int profit = price[i] - buyPrice;
+                maxProfit = Math.max(maxProfit, profit);
+            } else {
+                buyPrice = price[i];
+            }
         }
-        for (int i = price[buyPrice]; i < n; i++) {
-            sellPrice = Math.max(sellPrice, price[i]);
-            profit = sellPrice - buyPrice;
-        }
-        return profit;
+        return maxProfit;
 
     }
 
