@@ -5,10 +5,10 @@ public class stock {
         int n = price.length, buyPrice = Integer.MAX_VALUE, maxProfit = 0;
         for (int i = 0; i < n; i++) {
             if (buyPrice < price[i]) {
-                int profit = price[i] - buyPrice;
+                int profit = price[i] - buyPrice; // core logic 1
                 maxProfit = Math.max(maxProfit, profit);
             } else {
-                buyPrice = price[i];
+                buyPrice = price[i];// core logic 2
             }
         }
         return maxProfit;
