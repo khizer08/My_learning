@@ -16,3 +16,4 @@ public class distinctarrayvalues {
         System.out.println(func(arr));
     }
 }
+// do try this problem with "hashset" once learnt.
