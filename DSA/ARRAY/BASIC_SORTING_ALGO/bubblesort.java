@@ -1,0 +1,35 @@
+import java.util.Arrays;
+
+public class bubblesort {
+    public static void func(int nums[]) {
+        int n = nums.length, temp = 0;
+        for (int j = 0; j < n - 1; j++) {
+            boolean swap = false;
+            for (int i = 0; i < n - (j + 1); i++) { // each time one element is compared.
+
+                if (nums[i] > nums[i + 1]) {// core logic (swap).
+                    temp = nums[i];
+                    nums[i] = nums[i + 1];
+                    nums[i + 1] = temp;
+                    swap = true;
+                }
+            }
+
+            if (!swap) {// if array is already sorted and so swapping accured in first iteration it
+                        // means the array is sorted and breaks out of loop and returns the array.
+                break;
+            }
+        }
+        System.out.println(Arrays.toString(nums));
+
+    }
+
+    public static void main(String[] args) {
+        int nums[] = { 5, 4, 2, 1, 3, 7, 9, 6 };
+        func(nums);
+    }
+
+}
+
+// output:-
+// [1, 2, 3, 4, 5, 6, 7, 9]
