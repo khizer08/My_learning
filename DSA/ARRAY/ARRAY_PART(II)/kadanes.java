@@ -1,25 +1,21 @@
 public class kadanes {
-    public static void func(int number[]) {
-        int currSum = 0, maxSum = Integer.MIN_VALUE;
-        for (int i = 0; i < number.length; i++) {
-            currSum += number[i];
-            if (currSum < 0) {
-                currSum = 0;
-            }
-            maxSum = Math.max(currSum, maxSum); // core logic
+    public static int func(int nums[]) {
+        int currSum = nums[0];
+        int maxSum = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            currSum = Math.max(nums[i], currSum + nums[i]);
+            maxSum = Math.max(maxSum, currSum);
         }
-        System.out.println("maximum Sum= " + maxSum);
+
+        return maxSum;
     }
 
     public static void main(String[] args) {
-        int number[] = { 1, 2, 3, 4, 5 };
-        func(number);
+        int nums[] = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+        System.out.println(func(nums));
     }
 }
 
 // output:-
-// maximum Sum= 15
-
-// #NOTE:-
-// For special case where all the elements of the array is negative run
-// a loop and find the min negative number and store it as "maxSum".
+// 6
