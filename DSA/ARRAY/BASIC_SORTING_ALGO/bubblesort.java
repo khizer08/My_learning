@@ -15,7 +15,7 @@ public class bubblesort {
                 }
             }
 
-            if (!swap) {// if array is already sorted and so swapping accured in first iteration it
+            if (!swap) {// if array is already sorted and no swapping accured in first iteration it
                         // means the array is sorted and breaks out of loop and returns the array.
                 break;
             }
@@ -25,11 +25,11 @@ public class bubblesort {
     }
 
     public static void main(String[] args) {
-        int nums[] = { 5, 4, 2, 1, 3, 7, 9, 6 };
+        int nums[] = { 1, 5, 2, 3, 4 };
         func(nums);
     }
 
 }
 
 // output:-
-// [1, 2, 3, 4, 5, 6, 7, 9]
+// [1, 2, 3, 4, 5]
