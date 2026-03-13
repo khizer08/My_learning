@@ -8,12 +8,12 @@ public class insertionsort {
             int curr = nums[i];
             int prev = i - 1;
 
-            //finding out the correct pos to insert
+            // finding out the correct pos to insert
             while (prev >= 0 && nums[prev] > curr) {
                 nums[prev + 1] = nums[prev];
                 prev--;
             }
-            //insertion
+            // insertion
             nums[prev + 1] = curr;
         }
 
@@ -25,3 +25,5 @@ public class insertionsort {
         System.out.println(Arrays.toString(nums));
     }
 }
+// output:-
+// [1, 2, 3, 4, 5]
