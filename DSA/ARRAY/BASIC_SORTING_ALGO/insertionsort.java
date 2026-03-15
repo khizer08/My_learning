@@ -25,6 +25,6 @@ public class insertionsort {
         System.out.println(Arrays.toString(nums));
     }
 }
-// output:-
 
+// output:-
 // [1, 2, 3, 4, 5]
