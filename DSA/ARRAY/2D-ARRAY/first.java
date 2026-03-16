@@ -15,7 +15,7 @@ public class first {
         System.out.print("Enter the number of columns: ");
         n = sc.nextInt();
 
-        // elements input.
+        // elements input logic.
         int arr[][] = new int[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -23,10 +23,10 @@ public class first {
             }
         }
 
-        // elements print.
+        // elements print logic.
         System.out.println(Arrays.deepToString(arr));
 
-        // finding largest and smallest number.
+        // finding largest and smallest number logic.
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 smallest = Math.min(smallest, arr[i][j]);

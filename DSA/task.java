@@ -1,11 +1,10 @@
-package DSA;
+import java.util.Collections;
+import java.util.Arrays;
 
-public class task {
+public class task{
     public static void main(String[] args) {
-        int a = 10, b = 12, c = 4;
-
-        int max = (a > b) ? (a > c ? a : c) : (b > c ? b : c);
-        System.out.println(max);
+        Integer arr[]={2,5,1,4,3};
+        Arrays.sort(arr,Collections.reverseOrder());
+        System.out.println(Arrays.toString(arr));
     }
-
 }
