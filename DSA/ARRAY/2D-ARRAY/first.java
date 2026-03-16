@@ -8,7 +8,7 @@ public class first {
         int smallest = Integer.MAX_VALUE;
         int largest = Integer.MIN_VALUE;
 
-        // array size input.
+        // array size input logic.
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of rows: ");
         m = sc.nextInt();
