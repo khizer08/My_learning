@@ -33,8 +33,8 @@ public class first {
                 largest = Math.max(largest, arr[i][j]);
             }
         }
-        System.out.println("Smallest element: " + smallest);
-        System.out.println("Largest element: " + largest);
+        System.out.println("Smallest element of the array: " + smallest);
+        System.out.println("Largest element of the array: " + largest);
         sc.close();
     }
 
