@@ -26,5 +26,6 @@ public class selectionsort {
         System.out.println(Arrays.toString(nums));
     }
 }
+
 // output:-
 // [1, 2, 3, 4, 5]
