@@ -19,3 +19,5 @@ git add .
         System.out.println(nums);
     }
 }
+
+// output:-
