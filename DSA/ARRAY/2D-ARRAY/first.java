@@ -4,21 +4,21 @@ import java.util.Scanner;
 public class first {
 
     public static void inputPrintCheck() {
-        int m, n;
+        int n, m;
         int smallest = Integer.MAX_VALUE;
         int largest = Integer.MIN_VALUE;
 
         // array size input logic.
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of rows: ");
-        m = sc.nextInt();
-        System.out.print("Enter the number of columns: ");
         n = sc.nextInt();
+        System.out.print("Enter the number of columns: ");
+        m = sc.nextInt();
 
         // elements input logic.
-        int arr[][] = new int[m][n];
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        int arr[][] = new int[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
                 arr[i][j] = sc.nextInt();
             }
         }
@@ -27,8 +27,8 @@ public class first {
         System.out.println(Arrays.deepToString(arr));
 
         // finding largest and smallest number logic.
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
                 smallest = Math.min(smallest, arr[i][j]);
                 largest = Math.max(largest, arr[i][j]);
             }
