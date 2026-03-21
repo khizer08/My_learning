@@ -9,7 +9,7 @@ public class selectionsortpractice {
 
             for (int j = i + 1; j < n; j++) {
 
-                if (nums[minpos] < nums[j]) { // descending sorting 
+                if (nums[minpos] < nums[j]) { // descending sorting
                     minpos = j;
                 }
             }
@@ -26,3 +26,6 @@ public class selectionsortpractice {
         System.out.println(Arrays.toString(nums));
     }
 }
+
+// output:-
+// [8, 7, 6, 5, 4, 3, 3, 2, 1, 1]
