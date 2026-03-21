@@ -17,7 +17,7 @@ public class countingsortpractice {
 
         int j = 0;
 
-        // descending sorting logic (this whole block).
+        // descending sorting logic (this whole block) .
         for (int i = count.length - 1; i >= 0; i--) {
             while (count[i] > 0) {
                 nums[j++] = i;
