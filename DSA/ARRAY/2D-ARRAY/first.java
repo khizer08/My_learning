@@ -15,7 +15,7 @@ public class first {
         System.out.print("Enter the number of columns: ");
         m = sc.nextInt();
 
-        // array elements input logic.
+        // array elements input logic .
         int arr[][] = new int[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
