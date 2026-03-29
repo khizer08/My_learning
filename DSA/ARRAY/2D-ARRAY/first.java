@@ -23,7 +23,7 @@ public class first {
             }
         }
 
-        // array elements print logic.
+        // array elements print logic .
         System.out.println(Arrays.deepToString(arr));
 
         // finding largest and smallest number logic and printing it .
