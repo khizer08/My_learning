@@ -26,7 +26,7 @@ public class first {
         // array elements print logic .
         System.out.println(Arrays.deepToString(arr));
 
-        // finding largest and smallest number logic and printing it .
+        // finding largest and smallest number logic .
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 smallest = Math.min(smallest, arr[i][j]);
