@@ -8,3 +8,4 @@ with open("sample.txt","r") as f:
             print(f"{word} found at line: {line_no}")
             break
         line_no+=1
+        print(data)
