@@ -11,5 +11,4 @@ for word in words:
         freq[word] += 1
     else:
         freq[word] = 1
-
 print(freq)
