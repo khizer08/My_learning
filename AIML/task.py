@@ -1,15 +1,15 @@
-# num=int(input("Enter the number: "))
-# sum=0
-# for i in range(1,num+1):
-#     sum+=i
+import nltk
+from nltk.tokenize import word_tokenize
+text = "dog cat dog fish cat dog"
 
-# print(f"Sum of {num} natural numbers {sum}")
+words = word_tokenize(text)
 
+freq = {}
 
-# string indexing and slicing 
+for word in words:
+    if word in freq:
+        freq[word] += 1
+    else:
+        freq[word] = 1
 
-# str="hello my name is khizer"
-
-# print(str[0]) # indexing
-
-# print(str[2:4]) # slicing
+print(freq)
