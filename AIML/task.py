@@ -1,14 +1,17 @@
-import nltk
-from nltk.tokenize import word_tokenize
-text = "dog cat dog fish cat dog"
+documents = [
+    "The brown fox jumps over the lazy dog",
+    "The quick brown dog outran the lazy fox",
+    "The dog is lazy and the fox is quick"
+]
 
-words = word_tokenize(text)
+processed_docs = [doc.lower().split() for doc in documents]
 
-freq = {}
+inverted_index = {}
 
-for word in words:
-    if word in freq:
-        freq[word] += 1
-    else:
-        freq[word] = 1
-print(freq)
+for doc_id, doc in enumerate(processed_docs):
+    for word in doc:
+        if word not in inverted_index:
+            inverted_index[word] = []
+        inverted_index[word].append(doc_id)
+
+print(inverted_index)
