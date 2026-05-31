@@ -4,5 +4,5 @@ try:
     print(data)
     
 except:
-    print("No file found")
+    print("File not found!")
         
