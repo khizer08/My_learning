@@ -12,7 +12,7 @@ for i in range(len(list1)):
     if list1[i]=="khizer":
         print(f"index is: {i}")
 
-list1.sort()
+# list1.sort()
 print(list1)
 list1.reverse()
 print(list1)
@@ -27,7 +27,7 @@ print(tup.count("khizer"))
 print(tup.index("ise"))
 
 
-#DICTIONARY:-
+# #DICTIONARY:-
 
 dict1={
     "name":"khizer",
@@ -38,6 +38,7 @@ dict1={
 print(dict1)
 
 print(dict1.get("name"))
+print(dict1.get("age"))
 
 
 # SETS:-

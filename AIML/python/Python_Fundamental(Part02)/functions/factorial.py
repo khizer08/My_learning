@@ -7,6 +7,3 @@ def fact(num):
     return facto
 
 print(fact(num))
-
-
-

@@ -12,10 +12,12 @@ class Laptop:
     def get_info(self): # instance method
         print(f"Laptop has {self.RAM} RAM and {self.storage} {self.storage_type}")
         
-    @staticmethod
-    def cal_discount(price,discount):
+    @staticmethod 
+    def cal_discount(price,discount): #static method
         final_price=price-(discount*price/100)
         print(f"discounted price= {final_price}")
         
 l1=Laptop("16gb","512gb")
 l1.cal_discount(40_000,10)
+l1.get_storage_type()
+l1.get_info()
