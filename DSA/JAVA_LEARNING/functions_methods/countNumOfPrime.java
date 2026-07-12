@@ -6,11 +6,10 @@ public class countNumOfPrime {
 
         if (number <= 1) {
             return false;
-            // as we know "0" and "1" is "Not a prime" , and negative numbers are not included in prime.
+            // as we know "0" and "1" is "Not a prime" , and negative numbers are not
+            // included in prime.
         }
-        if (number == 2) {
-            return true;// edge case handling.
-        }
+
         for (int i = 2; i <= Math.sqrt(number); i++) {// optimsed loop
             if (number % i == 0)
                 return false;
