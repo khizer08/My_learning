@@ -1,7 +1,7 @@
 public class subarray {
 
     public static void subarray_func(int number[]) {
-        int ts = 0, sum = 0;// to calculate total subarrays and sum of each subarray.
+        int ts = 0, sum = 0, max_sum = Integer.MIN_VALUE;// to calculate total subarrays and sum of each subarray.
         for (int i = 0; i < number.length; i++) {// logic behind this loop is to take "starting" element.
             for (int j = i; j < number.length; j++) {// logic behind this loop is to take "ending" element.
                 System.out.print("[");
@@ -11,11 +11,15 @@ public class subarray {
                 }
                 ts++;
                 System.out.print("]" + " " + "=" + sum);
+                if (sum > max_sum) {
+                    max_sum = sum;
+                }
                 sum = 0;
             }
             System.out.println();
         }
         System.out.println("Total subarrays =" + ts);
+        System.out.println("Max Subarray Sum: "+max_sum);
     }
 
     public static void main(String[] args) {
