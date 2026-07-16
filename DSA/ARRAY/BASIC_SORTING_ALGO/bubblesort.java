@@ -3,14 +3,14 @@ import java.util.Arrays;
 public class bubblesort {
     public static void func(int nums[]) {
         int n = nums.length, temp = 0;
-        for (int j = 0; j < n - 1; j++) {
+        for (int i = 0; i < n - 1; i++) {
             boolean swap = false;
-            for (int i = 0; i < n - (j + 1); i++) { // each time one element is compared.
+            for (int j = 0; j < n - (i + 1); j++) { // each time one element is compared.
 
-                if (nums[i] > nums[i + 1]) {// core logic (swap).
-                    temp = nums[i];
-                    nums[i] = nums[i + 1];
-                    nums[i + 1] = temp;
+                if (nums[j] > nums[j + 1]) {// core logic (swap).
+                    temp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = temp;
                     swap = true;
                 }
             }
