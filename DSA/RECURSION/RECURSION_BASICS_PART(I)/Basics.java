@@ -4,14 +4,14 @@ public class Basics {
             System.out.println(nums);
             return;
         }
-        System.out.println(nums + " ");
+        System.out.print(nums + " ");
         decreasingOrder(nums - 1);
 
     }
 
     public static void increasingOrder(int nums) {
         if (nums == 1) {
-            System.out.println(nums + " ");
+            System.out.print(nums + " ");
             return;
         }
         increasingOrder(nums - 1);

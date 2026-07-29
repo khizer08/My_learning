@@ -13,7 +13,7 @@ public class Fibonacci {
     }
 
     public static void main(String[] args) {
-        int num = 7; // 5th Fibonacci number.
+        int num = 5; // 5th Fibonacci number.
         System.out.println(FibonacciFunc(num));
     }
 }
