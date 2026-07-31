@@ -1,19 +1,21 @@
+import java.util.*;
+
 public class test {
-    public static void ReverseString(char[] s) {
-        int first = 0;
-        int last = s.length - 1;
-        while (first < last) {
-            char temp = s[first];
-            s[first] = s[last];
-            s[last] = temp;
-            first++;
-            last--;
+    public static String task(String s[]) {
+        String prefix=s[0];
+        for(int i=1;i<s.length;i++){
+            boolean result=s[i].startsWith(prefix);
+            if(result==false){
+                prefix=prefix.
+            }
+
         }
-        System.out.println(s);
+        return prefix;
     }
 
     public static void main(String args[]) {
-        char[] s = { 'h', 'e', 'l', 'l', 'o' };
-        ReverseString(s);
+        String s[] = {"flower","flow","flight"};
+        System.out.println(task(s));
     }
+
 }
