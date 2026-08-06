@@ -8,17 +8,14 @@ public class BinaryStrings {
             return;
         }
 
+        BinaryStringsFunc(n - 1, 0, str + "0");
         if (lastPlace == 0) {
-            // sit 0 on chair n
-            BinaryStringsFunc(n - 1, 0, str + "0");
-
             BinaryStringsFunc(n - 1, 1, str + "1");
-        } else {
-            BinaryStringsFunc(n - 1, 0, str + "0");
+
         }
     }
 
     public static void main(String[] args) {
-        BinaryStringsFunc(3, 0, "");
+        BinaryStringsFunc(7, 0, "");
     }
 }
