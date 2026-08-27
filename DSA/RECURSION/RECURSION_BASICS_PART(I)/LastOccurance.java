@@ -1,7 +1,7 @@
 public class LastOccurance {
 
     public static int LastOccuranceFunc(int nums[], int key, int i) {
-        if (i < 0) { // base case
+        if (i == -1) { // base case
             return -1;
         }
         if (key == nums[i]) {
