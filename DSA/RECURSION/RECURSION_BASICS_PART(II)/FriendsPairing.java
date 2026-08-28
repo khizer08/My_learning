@@ -20,7 +20,7 @@ public class FriendsPairing {
     }
 
     public static void main(String[] args) {
-        int n = 3;
+        int n = 4;
         System.out.println(FriendsPairingFunc(n));
     }
 }

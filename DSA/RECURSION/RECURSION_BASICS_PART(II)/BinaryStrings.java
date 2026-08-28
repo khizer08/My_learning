@@ -9,13 +9,13 @@ public class BinaryStrings {
         }
 
         BinaryStringsFunc(n - 1, 0, str + "0");
+
         if (lastPlace == 0) {
             BinaryStringsFunc(n - 1, 1, str + "1");
-
         }
     }
 
     public static void main(String[] args) {
-        BinaryStringsFunc(7, 0, "");
+        BinaryStringsFunc(4, 0, "");
     }
 }

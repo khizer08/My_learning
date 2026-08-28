@@ -1,6 +1,8 @@
 public class RemoveDuplicatesString {
 
     public static void RemoveDuplicatesStringFunc(String str, int idx, StringBuilder newStr, boolean map[]) {
+
+        //base case
         if (idx == str.length()) {
             System.out.println(newStr);
             return;
