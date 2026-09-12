@@ -1,18 +1,13 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class basics {
     public static void main(String[] args) {
+        ArrayList<ArrayList<Integer>> mainList = new ArrayList<>();
         ArrayList<Integer> list1 = new ArrayList<>();
-        ArrayList<Integer> list2 = new ArrayList<>();
-        for (int i = 1; i <= 5; i++) {
-            list1.add(i);
-        }
-        System.out.println(list1);
-        for (int i = list1.size() - 1; i >= 0; i--) {
-            list2.add(list1.get(i));
-        }
-
-        System.out.println(list2);
-
+        list1.add(1);
+        list1.add(1);
+        list1.add(1);
+        mainList.add(list1);
+        System.out.println(mainList);
     }
 }
